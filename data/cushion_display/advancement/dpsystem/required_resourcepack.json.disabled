@@ -1,0 +1,21 @@
+{
+	"display": {
+		"title": "Resourcepack Required!",
+		"description": "§7If you do not see a §agreen tick §7here, you §chave not §7installed the needed resourcepack properly.\n\n§8§oNo mod is required! :)",
+		"icon": {
+			"id": "minecraft:barrier",
+			"components": {
+				"item_model": "..."
+			}
+		},
+		"announce_to_chat": false,
+		"show_toast": false,
+		"frame": "goal"
+	},
+	"parent": "custom:dpsystem/icon",
+	"criteria": {
+		"Install and load the datapack's resource pack": {
+			"trigger": "minecraft:impossible"
+		}
+	}
+}

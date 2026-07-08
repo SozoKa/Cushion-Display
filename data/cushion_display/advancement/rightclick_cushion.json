@@ -1,0 +1,17 @@
+{
+    "criteria": {
+        "yes": {
+            "trigger": "minecraft:player_interacted_with_entity",
+            "conditions": {
+                "player": [],
+                "entity": {
+                    "minecraft:entity_type": "minecraft:interaction",
+                    "minecraft:nbt": "{Tags:[potential_cushion]}"
+                }
+            }
+        }
+    },
+    "rewards": {
+        "function": "cushion_display:place/init"
+    }
+}
