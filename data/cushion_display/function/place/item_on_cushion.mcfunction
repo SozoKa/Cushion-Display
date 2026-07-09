@@ -1,12 +1,10 @@
-# Spawn unpickable and infinite item
-summon item ~ ~.25 ~ {PickupDelay:-1,Age:-1,Item:{id:"stone_button",components:{custom_data:{kill:1b}}},Tags:[is_cushion_display_item,this]}
-
 # Copy data from player's item
-data modify entity @n[type=item,tag=this] Item set from entity @s SelectedItem
+data modify storage cushion_display:data item set from entity @s SelectedItem
+# data modify storage cushion_display:data item.components."minecraft:custom_data".kill set value 1b
+data modify storage cushion_display:data item.count set value 1b
 
-# Dup security
-data modify storage cushion_display:data temp.kill set from entity @n[type=item,tag=this] Item.components."minecraft:custom_data".kill
-execute if data storage cushion_display:data temp{kill:1b} run function cushion_display:dup_security
+# Spawn unpickable and infinite item
+function cushion_display:place/spawn_item with storage cushion_display:data
 
 # Bulk edit item's data
 execute as @n[type=item,tag=this] run function cushion_display:modify_item_data

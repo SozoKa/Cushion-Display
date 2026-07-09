@@ -1,0 +1,18 @@
+{
+	"display": {
+		"icon": {
+			"id": "minecraft:paper"
+		},
+		"title": "1.1.0 - 2026/07/09",
+		"description": "§7- Modified item spawn mechanic so we don't see a stone button for a fraction of a second\n- Fixed displayed items that are picked up by hoppers, they now recover all their previous data\n- The method for generating interactions has been updated to improve their placement and quantity",
+		"show_toast": false,
+		"announce_to_chat": false,
+		"frame": "challenge"
+	},
+	"parent": "cushion_display:dpsystem/changelog/1.0.0",
+	"criteria": {
+		"": {
+			"trigger": "minecraft:tick"
+		}
+	}
+}

@@ -1,2 +1,7 @@
 1.0.0
 - Release
+
+1.1.0
+- Modified item spawn mechanic so we don't see a stone button for a fraction of a second
+- Fixed displayed items that are picked up by hoppers, they now recover all their previous data
+- The method for generating interactions has been updated to improve their placement and quantity

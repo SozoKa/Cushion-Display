@@ -1,10 +1,10 @@
-# If player is sneaking with an item in hand, prepare system
-execute as @a[predicate=cushion_display:sneak_with_item_in_hand] at @s run function cushion_display:prepare
-# If player is not sneaking with an item in hand, remove the potential cushion interaction entities
-execute unless entity @a[predicate=cushion_display:sneak_with_item_in_hand] as @e[type=cushion,tag=potential_cushion] at @s run function cushion_display:potential_cushion/remove
+# If player placed interaction entity (has advancement) prepare if they stop looking at the cushion or move too far away, reset the raycast actions
+execute as @a[advancements={cushion_display:all_condition_to_place=true}] at @s unless predicate cushion_display:all_conditions_interaction run function cushion_display:raycast/reset
+execute as @a[advancements={cushion_display:all_condition_to_place=true}] at @s if predicate cushion_display:all_conditions_interaction if entity @e[type=interaction,tag=potential_cushion,distance=4..] run function cushion_display:raycast/reset
 
-# Make all cushion displays set their Item Age to -1 so they don't despawn
+# Make all cushion displays run their actions and tests
 execute as @e[type=cushion,tag=is_cushion_display] run function cushion_display:cushion_actions_and_tests
 
-# If displayed item detects that it is no longer riding a cushion reset its tags and pick up values
-execute as @e[type=item,tag=is_cushion_display_item,predicate=!cushion_display:on_vehicle] run function cushion_display:reset_item
+# If displayed item detects that it is no longer riding a cushion reset it
+# execute as @e[type=item,tag=is_cushion_display_item,predicate=!cushion_display:on_vehicle] run function cushion_display:reset_item
+execute as @a at @s as @e[distance=..5,type=item,tag=is_cushion_display_item,predicate=!cushion_display:on_vehicle] run function cushion_display:reset_item

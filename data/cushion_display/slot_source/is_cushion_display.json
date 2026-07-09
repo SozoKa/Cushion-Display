@@ -1,0 +1,17 @@
+{
+    "type": "minecraft:filtered",
+    "slot_source": [
+        {
+            "type": "minecraft:slot_range",
+            "source": "container",
+            "slots": "container.*"
+        }
+    ],
+    "item_filter": {
+        "predicates": {
+            "minecraft:custom_data": {
+                "cushion_display": true
+            }
+        }
+    }
+}

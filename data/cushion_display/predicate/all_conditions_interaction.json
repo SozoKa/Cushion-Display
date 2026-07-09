@@ -2,10 +2,15 @@
     "condition": "minecraft:entity_properties",
     "entity": "this",
     "predicate": {
-        "flags": {
+        "minecraft:type_specific/player": {
+            "looking_at": {
+                "minecraft:entity_type": "minecraft:interaction"
+            }
+        },
+        "minecraft:flags": {
             "is_sneaking": true
         },
-        "equipment": {
+        "minecraft:equipment": {
             "mainhand": {
                 "count": {
                     "min": 1
