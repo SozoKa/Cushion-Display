@@ -1,17 +1,20 @@
 {
-    "criteria": {
-        "yes": {
-            "trigger": "minecraft:player_interacted_with_entity",
-            "conditions": {
-                "player": [],
-                "entity": {
-                    "minecraft:entity_type": "minecraft:interaction",
-                    "minecraft:nbt": "{Tags:[potential_cushion]}"
-                }
-            }
+  "criteria": {
+    "yes": {
+      "trigger": "minecraft:player_interacted_with_entity",
+      "conditions": {
+        "entity": {
+          "type": "minecraft:entity_properties",
+          "entity": "this",
+          "predicate": {
+            "minecraft:entity_type": "minecraft:interaction",
+            "minecraft:nbt": "{Tags:[potential_cushion]}"
+          }
         }
-    },
-    "rewards": {
-        "function": "cushion_display:place/init"
+      }
     }
+  },
+  "rewards": {
+    "function": "cushion_display:place/init"
+  }
 }

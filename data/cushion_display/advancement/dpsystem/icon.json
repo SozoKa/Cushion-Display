@@ -4,7 +4,7 @@
 			"id": "minecraft:red_cushion"
 		},
 		"title": "Cushion Display",
-		"description": "§8Made for §c26.3\n§8v1.1.0\n\n§7Allows players to place items on cushions and use them as display stands!\n\n§8by §cSozoKa",
+		"description": "§8Made for §c26.3\n§8v1.1.1\n\n§7Allows players to place items on cushions and use them as display stands!\n\n§8by §cSozoKa",
 		"show_toast": false,
 		"announce_to_chat": false
 	},

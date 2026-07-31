@@ -5,3 +5,6 @@
 - Modified item spawn mechanic so we don't see a stone button for a fraction of a second
 - Fixed displayed items that are picked up by hoppers, they now recover all their previous data
 - The method for generating interactions has been updated to improve their placement and quantity
+
+1.1.1
+- Big changes were made in the 26.3-snapshot-4, which broke anything that required advancements/predicates/item_modifiers/...

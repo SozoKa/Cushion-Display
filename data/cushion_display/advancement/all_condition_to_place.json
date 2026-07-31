@@ -1,35 +1,36 @@
 {
-    "criteria": {
-        "Look at cushion, sneak and hold item": {
-            "trigger": "minecraft:tick",
-            "conditions": {
-                "player": [
-                    {
-                        "entity": "this",
-                        "predicate": {
-                            "minecraft:flags": {
-                                "is_sneaking": true
-                            },
-                            "minecraft:equipment": {
-                                "mainhand": {
-                                    "count": {
-                                        "min": 1
-                                    }
-                                }
-                            },
-                            "minecraft:type_specific/player": {
-                                "looking_at": {
-                                    "minecraft:entity_type": "minecraft:cushion"
-                                }
-                            }
-                        },
-                        "condition": "minecraft:entity_properties"
-                    }
-                ]
+  "criteria": {
+    "Look at cushion, sneak and hold item": {
+      "trigger": "minecraft:tick",
+      "conditions": {
+        "player": {
+          "type": "minecraft:all_of",
+          "terms": {
+            "type": "minecraft:entity_properties",
+            "entity": "this",
+            "predicate": {
+              "minecraft:flags": {
+                "is_sneaking": true
+              },
+              "minecraft:equipment": {
+                "mainhand": {
+                  "count": {
+                    "min": 1
+                  }
+                }
+              },
+              "minecraft:type_specific/player": {
+                "looking_at": {
+                  "minecraft:entity_type": "minecraft:cushion"
+                }
+              }
             }
+          }
         }
-    },
-    "rewards": {
-        "function": "cushion_display:raycast/init"
+      }
     }
+  },
+  "rewards": {
+    "function": "cushion_display:raycast/init"
+  }
 }
